@@ -1,0 +1,18 @@
+type,value,confidence,description,tlp
+sha256,048e374baac36d8cf68dd32e48313ef8eb517d647548b1bf5f26d2d0e2e3cdc7,high,UPX-packed ELF binary — Mirai variant usble726 with embedded XMRig,WHITE
+ip,130.12.180.51,high,Attacker source IP — Virtualine Technologies AS202412 Aachen Germany — 3141 AbuseIPDB reports 100% confidence,WHITE
+asn,AS202412,medium,Virtualine Technologies — budget VPS provider used for attacker infrastructure,WHITE
+ssh-key-comment,rsa-key-20230629,high,SSH backdoor key comment — key active since at least June 2023,WHITE
+ssh-public-key,AAAAB3NzaC1yc2EAAAADAQABAAABAQCqHrvnL6l7rT/mt1AdgdY9tC1GPK216q0q/7neNVqm7AgvfJIM3ZKniGC3S5x6KOEApk+83GM4IKjCPfq007SvT07qh9AscVxegv66I5yuZTEaDAG6cPXxg3/0oXHTOTvxelgbRrMzfU5SEDAEi8+ByKMefE+pDVALgSTBYhol96hu1GthAMtPAFahqxrvaRR4nL4ijxOsmSLREoAb1lxiX7yvoYLT45/1c5dJdrJrQ60uKyieQ6FieWpO2xF6tzfdmHbiVdSmdw0BiCRwe+fuknZYQxIC1owAj2p5bc+nzVTi3mtBEk9rGpgBnJ1hcEUslEf/zevIcX8+6H7kUMRr,high,SSH RSA public key used as persistent backdoor,WHITE
+beacon-string,auth_ok,high,Hex-encoded C2 confirmation beacon (\x61\x75\x74\x68\x5F\x6F\x6B) — signals successful backdoor installation,WHITE
+filename,clean.sh,medium,Staged cleanup script — removes competing malware — self-deletes after execution,WHITE
+filename,setup.sh,medium,Staged payload installer — deploys Mirai+XMRig binary — self-deletes after execution,WHITE
+build-path,/var/build/xmrig,medium,Hardcoded build path in binary — suggests custom compiled payload on actor-controlled build server,WHITE
+mining-protocol,stratum+ssl://,high,XMRig mining pool connection protocol — egress block recommended,WHITE
+mining-protocol,stratum+tcp://,high,XMRig mining pool connection protocol — egress block recommended,WHITE
+mining-algorithm,cryptonight-monerov7,high,Monero mining algorithm used by embedded XMRig,WHITE
+mining-algorithm,cryptonight-monerov8,high,Monero mining algorithm used by embedded XMRig,WHITE
+cve,CVE-2023-44487,medium,HTTP/2 Rapid Reset — present on attacker host 130.12.180.51 (nginx),WHITE
+cve,CVE-2025-23419,medium,nginx vulnerability — present on attacker host 130.12.180.51,WHITE
+cve,CVE-2021-23017,medium,nginx resolver vulnerability — present on attacker host 130.12.180.51,WHITE
+cve,CVE-2021-3618,medium,nginx vulnerability — present on attacker host 130.12.180.51,WHITE

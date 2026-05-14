@@ -1,0 +1,33 @@
+# Strings output from unpacked Mirai binary
+# SHA256: 048e374baac36d8cf68dd32e48313ef8eb517d647548b1bf5f26d2d0e2e3cdc7
+# Unpacked with: upx -d malware.bin -o malware_unpacked.bin
+# Command: strings malware_unpacked.bin
+
+# Selected notable strings:
+
+poolu
+:httpu6
+:http
+127.0.0.1
+stratum+ssl://%s
+stratum+tcp://
+cryptonight-monerov7
+cryptonight-monerov8
+donate.ssl.xmrig.com
+donate.v2.xmrig.com
+xmrig
+no valid configuration found, try https://xmrig.com/wizard
+/var/build/xmrig/scripts/build/hwloc-2.12.2/include/hwloc/plugins.h
+/var/build/xmrig/scripts/build/abseil-cpp/absl/container/internal/raw_hash_set.cc
+ssh-userauth
+Waiting for password response
+password
+[1;37m config
+user-agent
+worker-id
+pass
+donate-over-proxy
+donate-level
+[1;32muser inactive
+[1;33muser active
+[no active pools, stop mining]
